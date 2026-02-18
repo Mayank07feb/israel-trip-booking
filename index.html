@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Hebrew:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="./style.css" rel="stylesheet">
+
+    <script>
+        (function (w, t, c, p, s, e) {
+            p = new Promise(function (r) {
+                w[c] = {
+                    client: function () {
+                        if (!s) {
+                            s = document.createElement(t); s.src = 'https://js.cobrowse.io/CobrowseIO.js'; s.async = 1; s.crossOrigin = 'anonymous';
+                            e = document.getElementsByTagName(t)[0]; e.parentNode.insertBefore(s, e); s.onload = function () { r(w[c]); };
+                        } return p;
+                    }
+                };
+            });
+        })(window, 'script', 'CobrowseIO');
+        CobrowseIO.license = "-7gRachELA6a3A";
+        CobrowseIO.client().then(function () {
+            CobrowseIO.start();
+        });
+
+        // start CobrowseIO
+        function startCobrowse() {
+            CobrowseIO.client().then(function () {
+                CobrowseIO.createSessionCode().then(function (code) {
+                    console.log("Your code is", code);
+                    document.getElementById("cobrowse-code-display").textContent = "Your session code is: " + code;
+                });
+            });
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero p-2 p-sm-5">
+        <video autoplay muted loop>
+            <source src="./media/48de2066ae68dc8706b9435b3a86f176f11be3c1.mp4" type="video/mp4">
+        </video>
+        <div class="container-fluid">
+            <div class="hero-mb-8 text-center">
+                <img src="./media/logo-white.png" class="img-fluid rounded main-site-log" alt="Logo"
+                    style="width: 150px;">
+            </div>
+
+            <div class="text-center">
+                <p>הצעת מחיר לחבילה חלומית!</p>
+                <h3 class="hero-h3-font">Florence-Chianti-Saturnia
+                </h3>
+                <p class="gveret-Levin-font d-none">טיול חלומי באיטליה - 8 ימים</p>
+                <h4 class="text-light">Version: 3 </h4>
+                <h4 class="text-light">Trip No: 278 </h4>
+            </div>
+            <div class="hero-buttons mt-4">
+                <button class="btn-option btn-dark-option">
+                    <span class="btn-number">2</span>
+                    <span class="btn-text">הצעה</span>
+                </button>
+
+                <button class="btn-option btn-red-option">
+                    <span class="btn-number">1</span>
+                    <span class="btn-text">הצעה</span>
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Car and Private Transport div -->
+    <div class="py-4 py-sm-5">
+        <div class="container">
+
+            <!-- Card-1 -->
+            <div class="mb-3 mb-sm-5">
+                <div class="trip-card mx-auto">
+                    <div class="trip-overlay">
+                        <div class="trip-day">יום 1: הגעה לפירנצה</div>
+                        <div class="trip-date">Oct 27, Fri</div>
+                    </div>
+
+                    <!-- Top Image -->
+                    <div class="trip-image">
+                        <img src="./media/Frame_1709.png" alt="Florence">
+                    </div>
+
+                    <!-- Content Area -->
+                    <div class="trip-content">
+
+                        <!-- Row -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <!-- <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('flight')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button> -->
+                                <div class="trip-text">
+                                    <h6>טיסה</h6>
+                                    <p>ישראל → רומא</p>
+                                    <small>10am · LY386 · EL AL · TLV, Israel</small>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <!-- <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('transfer')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button> -->
+                                <div class="trip-text">
+                                    <h6>העברה</h6>
+                                    <p>שדה → מלון</p>
+                                    <small>סיוע עם מזוודות והסעה פרטית</small>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <!-- <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('train')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button> -->
+                                <div class="trip-text">
+                                    <h6>רכבת</h6>
+                                    <p>רומא → פירנצה</p>
+                                    <small>Roma Termini · 2h 30m</small>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- NEW HOTEL CARD -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('hotel')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <div class="trip-text">
+                                    <h6>מלון · קבלת חדרים</h6>
+                                    <p>Hotel Berchielli</p>
+                                    <small>4 כוכבים · מרכזי</small>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-4.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Card-2 -->
+            <div class="mb-3 mb-sm-5">
+                <div class="trip-card mx-auto">
+                    <div class="trip-overlay">
+                        <div class="trip-day">יום 2: פירנצה</div>
+                        <div class="trip-date">Oct 28, Fri</div>
+                    </div>
+
+                    <!-- Top Image -->
+                    <div class="trip-image">
+                        <img src="./media/Frame-1711.png" alt="Florence">
+                    </div>
+
+                    <!-- Content Area -->
+                    <div class="trip-content">
+
+                        <!-- רכב השכרה -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <!-- <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('car')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button> -->
+                                <div class="trip-text">
+                                    <h6>רכב השכרה · איסוף</h6>
+                                    <p>Hyundai Tucson or similar · Avis, Florence</p>
+                                    <small>איסוף מסניף העיר</small>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-5.png" alt="Car">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- טיול בעיר -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('activities')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <div class="trip-text">
+                                    <h6>טיול בעיר</h6>
+                                    <p>הסתובבו באופן עצמאי בעיר ובקרו באתרים מיוחדים.</p>
+                                    <small>מרכז פירנצה</small>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-6.png" alt="City Tour">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- חוויה קולינרית -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('food')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <div class="trip-text">
+                                    <h6>חוויה קולינרית</h6>
+                                    <p>ארוחה במסעדה טוסקנית אותנטית</p>
+                                    <small>Osteria Pastela</small>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-7.png" alt="Restaurant">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- פעילויות נוספות -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('activities')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <div class="trip-text green-text">
+    <h6>פעילויות נוספות</h6>
+    <p>בתוספת תשלום מחוץ לחבילה</p>
+    <small>סיורים מיוחדים באזור</small>
+</div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-8.png" alt="Extra Activities">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card-3 -->
+            <div class="mb-3 mb-sm-5">
+                <div class="trip-card mx-auto">
+
+                    <div class="trip-overlay">
+                        <div class="trip-day">יום 3: הגעה לקיאנטי</div>
+                        <div class="trip-date">Oct 30, Fri</div>
+                    </div>
+
+                    <!-- Top Image -->
+                    <div class="trip-image">
+                        <img src="./media/Frame-1712.png" alt="Chianti">
+                    </div>
+
+                    <!-- Content Area -->
+                    <div class="trip-content">
+
+                        <!-- מלון · פינוי חדרים -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <!-- <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('checkout')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button> -->
+                                <div class="trip-text">
+                                    <h6>מלון · פינוי חדרים</h6>
+                                    <p>12pm</p>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-9.png" alt="Checkout">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- נסיעה -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <!-- <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('transfer')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button> -->
+                                <div class="trip-text">
+                                    <h6>נסיעה</h6>
+                                    <p>פירנצה ← קיאנטי</p>
+                                    <small>2h</small>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-10.png" alt="Drive">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- מלון · קבלת חדרים -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('hotel')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <div class="trip-text">
+                                    <h6>מלון · קבלת חדרים</h6>
+                                    <p>Castello Di Volpaia · 4 כוכבים · קיאנטי</p>
+                                    <small>4pm</small>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-11.png" alt="Hotel Room">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- חוויה קולינרית -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('food')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <div class="trip-text">
+                                    <h6>חוויה קולינרית</h6>
+                                    <p>ארוחה במסעדת השף דריו צ׳קיני</p>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-12.png" alt="Dinner">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- פעילויות נוספות -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('activities')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <div class="trip-text green-text">
+                                    <h6>פעילויות נוספות</h6>
+                                    <p>בתוספת תשלום מחוץ לחבילה</p>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-13.png" alt="Extra Activities">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Card-4 -->
+            <div class="mb-3 mb-sm-5">
+                <div class="trip-card mx-auto">
+
+                    <div class="trip-overlay">
+                        <div class="trip-day">יום 4: קיאנטי</div>
+                        <div class="trip-date">Oct 31, Fri</div>
+                    </div>
+
+                    <!-- Top Image -->
+                    <div class="trip-image">
+                        <img src="./media/Frame-1713.png" alt="Chianti">
+                    </div>
+
+                    <!-- Content Area -->
+                    <div class="trip-content">
+
+                        <!-- סדנת בישול -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('cooking')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button>
+                                <div class="trip-text">
+                                    <h6>סדנת בישול</h6>
+                                    <p>it cooking</p>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-14.png" alt="Cooking Class">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Card-5 -->
+            <div class="mb-3 mb-sm-5">
+                <div class="trip-card mx-auto">
+
+                    <div class="trip-overlay">
+                        <div class="trip-day">יום 5: חזרה לישראל</div>
+                        <div class="trip-date">Oct 1, Fri</div>
+                    </div>
+
+                    <!-- Top Image -->
+                    <div class="trip-image">
+                        <img src="./media/Frame-1714.png" alt="Return Flight">
+                    </div>
+
+                    <!-- Content Area -->
+                    <div class="trip-content">
+
+                        <!-- מלון · פינוי חדרים -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <!-- <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('checkout')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button> -->
+                                <div class="trip-text">
+                                    <h6>מלון · פינוי חדרים</h6>
+                                    <p>12pm</p>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-15.png" alt="Checkout">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- רכב השכרה · החזרה -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <!-- <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('car')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button> -->
+                                <div class="trip-text">
+                                    <h6>רכב השכרה · החזרה</h6>
+                                    <p>FCO, Rome · Avis, Airport</p>
+                                    <small>1pm</small>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-16.png" alt="Car Return">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- טיסה -->
+                        <div class="trip-row-with-plus">
+                            <div class="trip-row">
+                                <!-- <button class="trip-plus-btn" title="הוסף" onclick="openDetailModal('flight')">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                        <path d="M2 8H14" stroke="#444" stroke-width="2.2" stroke-linecap="round" />
+                                    </svg>
+                                </button> -->
+                                <div class="trip-text">
+                                    <h6>טיסה</h6>
+                                    <p>רומא → ישראל</p>
+                                    <small>FCO, Rome · 5:30pm · 3h 45m</small>
+                                </div>
+                                <div class="trip-thumb">
+                                    <img src="./media/Depth-4-Frame-17.png" alt="Flight to Israel">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bonus card -->
+            <div class="mb-3 mb-sm-5">
+                <div class="bonus-card mx-auto">
+
+                    <!-- image -->
+                    <div class="bonus-image">
+                        <img src="./media/bonus-florence.png" alt="">
+                    </div>
+
+                    <!-- content -->
+                    <div class="bonus-content">
+
+                        <div class="bonus-title">
+                            בונוסים
+                            <span class="star">✦</span>
+                        </div>
+
+                        <!-- Wrapper added for side-by-side on mobile -->
+                        <div class="bonus-items-wrapper">
+
+                            <div class="bonus-item">
+                                <div class="bonus-badge">
+                                    ESIM
+                                    <span class="icon">📱</span>
+                                </div>
+                                <div class="bonus-text">
+                                    שתי חבילות 5GB בונוס,<br>
+                                    בשווי 30 אירו.
+                                </div>
+                            </div>
+
+                            <div class="bonus-item">
+                                <div class="bonus-badge">
+                                    אפליקציה
+                                    <span class="icon">📲</span>
+                                </div>
+                                <div class="bonus-text">
+                                    כל הלוז, המידע, ושירות<br>
+                                    לקוחות במקום אחד.
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end wrapper -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- Info Card -->
+            <div class="mb-3 mb-sm-5">
+                <div class="trip-card mx-auto private-trip-card">
+
+                    <div class="private-trip-section">
+
+                        <div class="info-icon">i</div>
+
+                        <h3 class="private-title">
+                            בואו נעבור ביחד על פרטי החבילה!
+                        </h3>
+
+                        <ol class="private-steps">
+                            <li>קבעו פגישה עם סליקטד למעבר על החבילה.</li>
+                            <li>בתום הפגישה, לחצו על הכפתור ושתפו את הקוד עם נציג סליקטד.</li>
+                        </ol>
+
+                        <button class="private-btn">
+                            לחצו לשיתוף המסך עם סליקטד
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Package Card -->
+            <div class="package-card">
+
+                <div class="package-image">
+                    <img src="./media/Frame-1715.png" alt="">
+                </div>
+
+                <div class="package-body">
+
+                    <div class="package-title">
+                        רכישת החבילה לטוסקנה
+                    </div>
+
+                    <div class="package-row">
+                        <div class="package-label">מחיר לאדם</div>
+                        <div class="package-value">$10,000</div>
+                    </div>
+
+                    <div class="package-row">
+                        <div class="package-label">מספר נוסעים</div>
+                        <div class="package-value">2</div>
+                    </div>
+
+                    <div class="package-total">
+                        <div>סה״כ</div>
+                        <div class="package-value">$20,000</div>
+                    </div>
+
+                    <button class="package-btn">
+                        רכישת חופשה בלתי נשכחת
+                    </button>
+
+                    <div class="package-timer">
+                        תוקף ההצעה:
+                        <span>71:32:41</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- not included card -->
+            <div class="mb-3 mb-sm-5">
+
+                <div class="not-included-card">
+
+                    <div class="not-included-title">
+                        מה <span class="red">לא</span> כלול בחבילה?
+                    </div>
+
+                    <ul class="not-included-list">
+
+                        <li class="not-included-item">
+                            <span class="not-included-icon">×</span>
+                            ארוחות אקסטרה שאינן כלולות בהצעה
+                        </li>
+
+                        <li class="not-included-item">
+                            <span class="not-included-icon">×</span>
+                            מס החזרת רכב בנקודה אחרת
+                        </li>
+
+                        <li class="not-included-item">
+                            <span class="not-included-icon">×</span>
+                            דלק
+                        </li>
+
+                        <li class="not-included-item">
+                            <span class="not-included-icon">×</span>
+                            חיובי אוטוסטרדות
+                        </li>
+
+                        <li class="not-included-item">
+                            <span class="not-included-icon">×</span>
+                            מיסים מקומיים
+                        </li>
+
+                        <li class="not-included-item">
+                            <span class="not-included-icon">×</span>
+                            רישיון נהיגה בינלאומי (יש להוציא בנוסף לרישיון הישראלי)
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <footer class="site-footer-bar">
+
+                <div class="site-footer-inner">
+
+                    <div class="site-footer-top">
+
+                        <div class="footer-item">
+                            <span class="material-icons">phone</span>
+                            התקשרו עכשיו: *8302
+                        </div>
+
+                        <div class="footer-item">
+                            <span class="material-icons">mail_outline</span>
+                            info@selectedplaces.co.il
+                        </div>
+
+                        <div class="footer-item">
+                            <span class="material-icons">location_on</span>
+                            בר כוכבא 23, מגדל V-TOWER, בני ברק
+                        </div>
+
+                    </div>
+
+                    <div class="footer-divider"></div>
+
+                    <div class="site-footer-center">
+                        <div class="trip">Trip No: 278</div>
+                        <div class="small">הסכם השירותים ו- הצהרה בדבר פרטיות וקבצי cookies</div>
+                        <div class="small">© כל הזכויות שמורות סלקטד 2025</div>
+                    </div>
+
+                </div>
+
+            </footer>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+
+        var swiper, swiper_fore_column;
+
+        function initialize2ColumnSwiper() {
+            swiper_fore_column = new Swiper('.swiper_2_column', {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 10,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+
+
+        function initializeSwiper() {
+            swiper = new Swiper('.swiper', {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+
+
+
+        function openTripSection(sectionId) {
+            var section_summary = document.getElementById('trip-section-summary-' + sectionId);
+            var section = document.getElementById('trip-section-' + sectionId);
+
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+                section_summary.style.display = 'none';
+                initializeSwiper();
+                initialize2ColumnSwiper();
+            } else {
+                section.style.display = 'none';
+                section_summary.style.display = 'block';
+            }
+
+            toggleButtons(sectionId);
+        }
+
+
+
+
+        function toggleButtons(sectionId) {
+            var plusButton = document.getElementById('plus-button-' + sectionId);
+            var closeButton = document.getElementById('close-button-' + sectionId);
+
+            if (plusButton.style.display !== 'none') {
+                plusButton.style.display = 'none';
+                closeButton.style.display = 'block';
+            } else {
+                plusButton.style.display = 'block';
+                closeButton.style.display = 'none';
+            }
+        }
+
+
+        initializeSwiper();
+        initialize2ColumnSwiper();
+
+
+
+        function showIframeSource() {
+            var quiero_comprar_btn = document.getElementById('quieroComprarBtn');
+            var iframe = document.getElementById('changeedIfrmSource');
+            if (iframe.style.display === "none" || iframe.style.display === "") {
+                iframe.style.display = "block";
+                quiero_comprar_btn.style.display = "none";
+            } else {
+                iframe.style.display = "none";
+                quiero_comprar_btn.style.display = "block";
+            }
+        }
+
+        // MODAL LOGIC
+        var modalCurrentSlide = 0;
+        var modalTotalSlides = 0;
+
+        var modalData = {
+            flight: {
+                title: "טיסה",
+                meta: "ישראל &rarr; רומא &bull; EL AL LY386",
+                images: [
+                    "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80",
+                    "https://images.unsplash.com/photo-1544016768-982d1554f1e8?w=800&q=80",
+                    "https://images.unsplash.com/photo-1569629743817-70d8db6c323b?w=800&q=80"
+                ]
+            },
+            transfer: {
+                title: "העברה פרטית",
+                meta: "שדה תעופה &rarr; מלון",
+                images: [
+                    "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+                    "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80"
+                ]
+            },
+            hotel: {
+                title: "Hotel Berchielli",
+                meta: "4 כוכבים &bull; 3 לילות",
+                desc: "מלון קלאסי בפירנצה, הממוקם על גדות נהר הארנו, סמוך לפונטה וקיו ולגלריית אופיצי. המלון מציע חדרים אלגנטיים עם נוף לעיר או לנהר, ארוחת בוקר עשירה ושירות אדיב. מתאים למי שמחפש מיקום מרכזי ואווירה פלורנטינית יוקרתית.",
+                images: [
+                    "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+                    "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80",
+                    "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
+                    "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&q=80"
+                ]
+            },
+            train: {
+                title: "רכבת",
+                meta: "Roma Termini &rarr; Firenze &bull; 2h 30m",
+                images: [
+                    "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&q=80",
+                    "https://images.unsplash.com/photo-1548345680-f5475ea5df84?w=800&q=80"
+                ]
+            },
+            car: {
+                title: "רכב השכרה",
+                meta: "Hyundai Tucson &bull; Avis",
+                images: [
+                    "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
+                    "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=800&q=80"
+                ]
+            },
+            food: {
+                title: "חוויה קולינרית",
+                meta: "ארוחה במסעדה טוסקנית אותנטית",
+                images: [
+                    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+                    "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+                    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80"
+                ]
+            },
+            cooking: {
+                title: "סדנת בישול",
+                meta: "Italian Cooking Class &bull; Chianti",
+                images: [
+                    "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+                    "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&q=80"
+                ]
+            },
+            activities: {
+                title: "פעילויות נוספות",
+                meta: "סיורים מיוחדים באזור",
+                images: [
+                    "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=80",
+                    "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80"
+                ]
+            },
+            checkout: {
+                title: "מלון - פינוי חדרים",
+                meta: "Check-out 12pm",
+                images: [
+                    "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80",
+                    "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+                ]
+            }
+        };
+
+        function openDetailModal(type) {
+            var data = modalData[type] || { title: type, meta: "", desc: "", images: ["https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=800&q=80"] };
+            modalCurrentSlide = 0;
+            document.getElementById('modalTitle').innerHTML = data.title;
+            document.getElementById('modalMeta').innerHTML = data.meta;
+            var descEl = document.getElementById('modalDesc');
+            if (descEl) descEl.innerHTML = data.desc || '';
+            var slidesEl = document.getElementById('modalSlides');
+            slidesEl.innerHTML = '';
+            data.images.forEach(function (src) {
+                var slide = document.createElement('div');
+                slide.className = 'modal-slide';
+                slide.innerHTML = '<img src="' + src + '" alt="">';
+                slidesEl.appendChild(slide);
+            });
+            modalTotalSlides = data.images.length;
+            var dotsEl = document.getElementById('modalDots');
+            dotsEl.innerHTML = '';
+            data.images.forEach(function (_, i) {
+                var dot = document.createElement('button');
+                dot.className = 'modal-dot' + (i === 0 ? ' active' : '');
+                dot.onclick = (function (idx) { return function () { goToModalSlide(idx); }; })(i);
+                dotsEl.appendChild(dot);
+            });
+            updateModalSlider();
+            document.getElementById('detailModalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDetailModal() {
+            document.getElementById('detailModalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeModalOnOverlay(e) {
+            if (e.target === document.getElementById('detailModalOverlay')) closeDetailModal();
+        }
+
+        function modalSlide(dir) {
+            modalCurrentSlide = (modalCurrentSlide + dir + modalTotalSlides) % modalTotalSlides;
+            updateModalSlider();
+        }
+
+        function goToModalSlide(index) {
+            modalCurrentSlide = index;
+            updateModalSlider();
+        }
+
+        function updateModalSlider() {
+            document.getElementById('modalSlides').style.transform = 'translateX(' + (modalCurrentSlide * 100) + '%)';
+            var dots = document.querySelectorAll('.modal-dot');
+            dots.forEach(function (d, i) { d.classList.toggle('active', i === modalCurrentSlide); });
+        }
+
+    </script>
+
+    <!-- DETAIL MODAL -->
+    <div class="detail-modal-overlay" id="detailModalOverlay" onclick="if(event.target===this)closeDetailModal()">
+        <div class="detail-modal">
+
+            <!-- Image Slider -->
+            <div class="modal-slider-wrap">
+                <!-- Close -->
+                <button class="modal-close-btn" onclick="closeDetailModal()">
+                    <span class="material-icons" style="font-size:20px;color:#333;">close</span>
+                </button>
+                <!-- Slides -->
+                <div class="modal-slides" id="modalSlides"></div>
+                <!-- Arrows -->
+                <button class="modal-arrow prev" onclick="modalSlide(-1)">
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <button class="modal-arrow next" onclick="modalSlide(1)">
+                    <span class="material-icons">chevron_right</span>
+                </button>
+                <!-- Dots -->
+                <div class="modal-dots" id="modalDots"></div>
+            </div>
+
+            <!-- Scrollable Body -->
+            <div class="modal-body-content">
+
+                <!-- Hotel Name + Meta + Description -->
+                <div class="modal-hotel-title" id="modalTitle">Hotel Berchielli</div>
+                <div class="modal-hotel-meta" id="modalMeta">4 כוכבים &bull; 3 לילות</div>
+                <div class="modal-hotel-desc" id="modalDesc">מלון קלאסי בפירנצה, הממוקם על גדות נהר הארנו, סמוך לפונטה
+                    וקיו ולגלריית אופיצי. המלון מציע חדרים אלגנטיים עם נוף לעיר או לנהר, ארוחת בוקר עשירה ושירות אדיב.
+                    מתאים למי שמחפש מיקום מרכזי ואווירה פלורנטינית יוקרתית.</div>
+
+                <div class="modal-divider"></div>
+
+                <!-- Room Type -->
+                <div class="modal-room-row">
+                    <div class="modal-room-label">סוג החדר</div>
+                    <div class="modal-room-value">1 King Bed &nbsp;&bull;&nbsp; Deluxe Room</div>
+                </div>
+
+                <div class="modal-divider"></div>
+
+                <!-- Amenities -->
+                <div class="modal-section-title">מתקנים ושירותים</div>
+                <div class="modal-amenities">
+                    <div class="modal-amenity">
+                        <div class="modal-amenity-icon"><span class="material-icons">pool</span></div>
+                        <span>בריכה</span>
+                    </div>
+                    <div class="modal-amenity">
+                        <div class="modal-amenity-icon"><span class="material-icons">wifi</span></div>
+                        <span>Wi-Fi</span>
+                    </div>
+                    <div class="modal-amenity">
+                        <div class="modal-amenity-icon"><span class="material-icons">local_parking</span></div>
+                        <span>חנייה</span>
+                    </div>
+                    <div class="modal-amenity">
+                        <div class="modal-amenity-icon"><span class="material-icons">menu_book</span></div>
+                        <span>מטבח כשר</span>
+                    </div>
+                </div>
+
+                <div class="modal-divider"></div>
+
+                <!-- Booking Rating -->
+                <div class="modal-section-title">ציון בבוקינג</div>
+                <div class="modal-rating-block">
+                    <div class="modal-rating-text">
+                        <div class="modal-rating-label">Wonderful</div>
+                        <div class="modal-rating-sub">2,380 reviews</div>
+                    </div>
+                    <div class="modal-rating-score">9.1</div>
+                </div>
+
+                <!-- Review 1 -->
+                <div class="modal-review">
+                    <div class="modal-review-header">
+                        <div class="modal-review-info">
+                            <div class="modal-review-name">Sophia Clark</div>
+                            <div class="modal-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        </div>
+                        <div class="modal-review-avatar" style="background:#4caf50;">S</div>
+                    </div>
+                    <p class="modal-review-text">Absolutely loved my stay at The Grand Budapest! The staff were
+                        incredibly friendly and helpful, the room was beautiful and clean, and the location was perfect.
+                        Highly recommend!</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="modal-review">
+                    <div class="modal-review-header">
+                        <div class="modal-review-info">
+                            <div class="modal-review-name">Ethan Bennett</div>
+                            <div class="modal-review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                        </div>
+                        <div class="modal-review-avatar" style="background:#2196f3;">E</div>
+                    </div>
+                    <p class="modal-review-text">The hotel is beautiful and the rooms are very comfortable. The service
+                        was good, but there were a few minor issues with the room service. Overall, a pleasant stay.</p>
+                </div>
+
+                <div class="modal-divider"></div>
+
+                <!-- Location -->
+                <div class="modal-section-title">מיקום</div>
+                <div class="modal-location-text">Lungarno degli Acciaiuoli, 14, 50123 Firenze FI, Italy</div>
+                <iframe class="modal-map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.123!2d11.2558!3d43.7696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a540a902a3c91%3A0x1!2sFirenze+Italy!5e0!3m2!1sen!2sus!4v1"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
