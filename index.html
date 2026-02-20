@@ -117,7 +117,8 @@
                                 </button> -->
                                 <div class="trip-text">
                                     <h6>טיסה</h6>
-                                    <p>ישראל → רומא</p>
+                                    <p>ישראל ←
+                                        רומא</p>
                                     <small>10am · LY386 · EL AL · TLV, Israel</small>
                                 </div>
                                 <div class="trip-thumb">
@@ -138,7 +139,8 @@
                                 </button> -->
                                 <div class="trip-text">
                                     <h6>העברה</h6>
-                                    <p>שדה → מלון</p>
+                                    <p>שדה ←
+                                        מלון</p>
                                     <small>סיוע עם מזוודות והסעה פרטית</small>
                                 </div>
                                 <div class="trip-thumb">
@@ -159,7 +161,8 @@
                                 </button> -->
                                 <div class="trip-text">
                                     <h6>רכבת</h6>
-                                    <p>רומא → פירנצה</p>
+                                    <p>רומא ←
+                                        פירנצה</p>
                                     <small>Roma Termini · 2h 30m</small>
                                 </div>
                                 <div class="trip-thumb">
@@ -534,7 +537,8 @@
                                 </button> -->
                                 <div class="trip-text">
                                     <h6>טיסה</h6>
-                                    <p>רומא → ישראל</p>
+                                    <p>רומא ←
+                                        ישראל</p>
                                     <small>FCO, Rome · 5:30pm · 3h 45m</small>
                                 </div>
                                 <div class="trip-thumb">
@@ -596,6 +600,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- Info Card -->
             <div class="mb-3 mb-sm-5">
                 <div class="trip-card mx-auto private-trip-card">
@@ -609,11 +614,12 @@
                         </h3>
 
                         <ol class="private-steps">
-                            <li>קבעו פגישה עם סליקטד למעבר על החבילה.</li>
-                            <li>בתום הפגישה, לחצו על הכפתור ושתפו את הקוד עם נציג סליקטד.</li>
+                            <li>קבעו פגישה עם סלקטד למעבר על החבילה.</li>
+                            <li>בזמן הפגישה לחצו על הכפתור ושתפו את הקוד עם נציג סלקטד.</li>
                         </ol>
 
-                        <button class="private-btn">
+
+                        <button class="private-btn" id="shareBtn">
                             לחצו לשיתוף המסך עם סליקטד
                         </button>
 
@@ -645,7 +651,7 @@
                         <div class="package-value">2</div>
                     </div>
 
-                    <div class="package-total">
+                    <div class="package-row">
                         <div>סה״כ</div>
                         <div class="package-value">$20,000</div>
                     </div>
@@ -709,6 +715,12 @@
                 </div>
 
             </div>
+
+            <div class="passport-warning-bar">
+                <span class="passport-dot"></span>
+                חשוב לוודא שפרטי דרכון שמות ותוקף נכונים
+            </div>
+
 
             <!-- Footer -->
             <footer class="site-footer-bar">
@@ -979,6 +991,20 @@
         }
 
     </script>
+
+    <script>
+        const btn = document.getElementById("shareBtn");
+
+        btn.addEventListener("click", function () {
+            btn.textContent = "130967";
+            btn.style.backgroundColor = "#e5e5e5";   // Gray background
+            btn.style.color = "#0a8f2c";             // Green text
+            btn.style.fontSize = "22px";
+            btn.style.fontWeight = "700";
+            btn.style.letterSpacing = "2px";
+        });
+    </script>
+
 
     <!-- DETAIL MODAL -->
     <div class="detail-modal-overlay" id="detailModalOverlay" onclick="if(event.target===this)closeDetailModal()">
