@@ -19,6 +19,14 @@ body {
   background: #f1f1f1;
 }
 
+.hero h1 {
+  font-size: 60px !important;
+}
+
+.hero p {
+  font-size: 26px !important;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
@@ -104,6 +112,51 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 576px) {
+
+  /* Hero height */
+  .hero {
+    height: 460px;
+  }
+
+  /* Main heading */
+  .hero h3 {
+    font-size: 34px !important;
+    line-height: 38px;
+    margin-bottom: 8px;
+  }
+
+  /* Paragraph */
+  .hero p {
+    font-size: 16px !important;
+    line-height: 22px;
+    margin-bottom: 6px;
+  }
+
+  /* Custom hero font */
+  .hero-h3-font {
+    font-size: 22px !important;
+    font-weight: 400;
+  }
+
+  .hero-h3-font span {
+    font-size: 40px !important;
+    font-weight: 600;
+  }
+
+  /* Reduce spacing wrapper */
+  .hero .hero-mb-8 {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Buttons spacing */
+  .hero-buttons {
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+}
+
 .trip-card {
   max-width: 860px;
   background: #ffffff;
@@ -150,7 +203,7 @@ body {
   flex-shrink: 0;
 }
 
-/* ✅ FIX: overflow hidden added so border-radius clips the image properly */
+/*  overflow hidden added so border-radius clips the image properly */
 .trip-image {
   overflow: hidden;
   border-radius: 18px;
@@ -173,7 +226,7 @@ body {
 }
 
 .trip-row {
-  background: #f2f2f2;
+  background: #ffffff;
   border-radius: 16px;
   padding: 16px 18px;
   display: flex;
@@ -241,12 +294,12 @@ body {
 }
 
 
-
 .trip-plus-btn {
   flex-shrink: 0;
   width: 38px;
   height: 38px;
-  background: #ffffff;
+  background: #f5f5f5;
+
   border: none;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
@@ -287,7 +340,6 @@ body {
 .info-icon {
   width: 48px;
   height: 48px;
-  background: #b7d7c3;
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -331,16 +383,22 @@ body {
   background: #087422;
 }
 
+/* =========================
+   BONUS SECTION – UPDATED
+========================= */
+
 .bonus-card {
   max-width: 860px;
   margin: 0 auto;
-  background: #fffaf0;
+  background: #F5EFE6;
   border-radius: 26px;
-  padding: 28px;
+  padding: 36px;
   display: flex;
-  gap: 36px;
   align-items: center;
+  justify-content: space-between;
+  gap: 48px;
   direction: ltr;
+  /* image left */
   font-family: 'Heebo', sans-serif;
 }
 
@@ -357,12 +415,17 @@ body {
   display: block;
 }
 
+/* Right content */
 .bonus-content {
   flex: 1;
   direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
+/* Title */
 .bonus-title {
   display: flex;
   align-items: center;
@@ -370,40 +433,54 @@ body {
   gap: 10px;
   font-size: 28px;
   font-weight: 800;
-  margin-bottom: 18px;
+  margin-bottom: 28px;
   color: #222;
 }
 
-.bonus-title .star {
-  font-size: 26px;
-  color: #ffcc2a;
+.bonus-title img {
+  width: 28px;
+  height: 28px;
 }
 
+/* Wrapper for ESIM + App */
+.bonus-items-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  width: 100%;
+}
+
+/* Each bonus item */
 .bonus-item {
-  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Badge */
 .bonus-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #fff2c4;
-  color: #222;
-  padding: 6px 14px;
-  border-radius: 8px;
+  background: #FCE7B2;
+  padding: 8px 18px;
+  border-radius: 10px;
   font-weight: 700;
   font-size: 18px;
-  margin: 0 auto 8px auto;
+  margin-bottom: 12px;
 }
 
-.bonus-badge .icon {
-  color: #ffbf00;
-  font-size: 16px;
+.bonus-badge img {
+  width: 22px;
+  height: 22px;
 }
 
+/* Text */
 .bonus-text {
-  font-size: 16px;
-  color: #333;
+  font-size: 15px;
+  color: #444;
   line-height: 1.6;
 }
 
@@ -647,15 +724,14 @@ body {
   color: #555;
 }
 
-
-
+/* ========================================
+   MODAL OVERLAY
+======================================== */
 .detail-modal-overlay {
-  display: none;
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(0, 0, 0, 0.5);
-  overflow: hidden;
+  background: rgba(0, 0, 0, 0.55);
   display: none;
   justify-content: center;
   align-items: stretch;
@@ -663,27 +739,31 @@ body {
 
 .detail-modal-overlay.active {
   display: flex;
-  animation: fadeIn 0.2s ease;
+  animation: fadeIn 0.25s ease;
 }
 
+/* ========================================
+   MODAL CONTAINER (WHOLE MODAL SCROLLS)
+======================================== */
 .detail-modal {
   width: 100%;
   max-width: 860px;
-  height: 100vh;
+  height: 100dvh;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
   background: #fff;
-  overflow: hidden;
   position: relative;
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
+/* ========================================
+   IMAGE SLIDER (SCROLLS WITH CONTENT)
+======================================== */
 .modal-slider-wrap {
   position: relative;
   width: 100%;
   height: 52vh;
-  overflow: hidden;
-  flex-shrink: 0;
   background: #111;
 }
 
@@ -706,32 +786,48 @@ body {
   display: block;
 }
 
+/* ========================================
+   CLOSE BUTTON (FIXED)
+======================================== */
 .modal-close-btn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 20;
-  background: rgba(255, 255, 255, 0.92);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
-}
+  position: fixed;              /* 🔥 FIXED */
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
 
-.modal-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.95);
   border: none;
   border-radius: 50%;
   width: 44px;
   height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  transform: scale(1.05);
+  background: #fff;
+}
+
+/* ========================================
+   ARROWS
+======================================== */
+.modal-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -745,22 +841,20 @@ body {
   background: #fff;
 }
 
-.modal-arrow.prev {
-  left: 16px;
-}
-
-.modal-arrow.next {
-  right: 16px;
-}
+.modal-arrow.prev { left: 16px; }
+.modal-arrow.next { right: 16px; }
 
 .modal-arrow .material-icons {
   font-size: 22px;
   color: #222;
 }
 
+/* ========================================
+   DOTS
+======================================== */
 .modal-dots {
   position: absolute;
-  bottom: 12px;
+  bottom: 14px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -768,8 +862,8 @@ body {
 }
 
 .modal-dot {
-  width: 7px;
-  height: 7px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.5);
   border: none;
@@ -780,17 +874,21 @@ body {
 
 .modal-dot.active {
   background: #fff;
-  transform: scale(1.35);
+  transform: scale(1.4);
 }
 
+/* ========================================
+   BODY CONTENT
+======================================== */
 .modal-body-content {
-  flex: 1;
-  overflow-y: auto;
   direction: rtl;
   padding: 24px 20px 40px;
   background: #fff;
 }
 
+/* ========================================
+   CONTENT STYLES
+======================================== */
 .modal-hotel-title {
   font-size: 22px;
   font-weight: 800;
@@ -879,6 +977,9 @@ body {
   color: #333;
 }
 
+/* ========================================
+   RATING
+======================================== */
 .modal-rating-block {
   display: flex;
   align-items: center;
@@ -909,13 +1010,13 @@ body {
   border-radius: 14px;
   padding: 8px 16px;
   line-height: 1;
-  flex-shrink: 0;
 }
 
+/* ========================================
+   REVIEWS
+======================================== */
 .modal-review {
   margin-bottom: 20px;
-  direction: ltr;
-  text-align: left;
 }
 
 .modal-review-header {
@@ -941,7 +1042,6 @@ body {
   font-weight: 700;
   font-size: 16px;
   color: #fff;
-  flex-shrink: 0;
 }
 
 .modal-review-name {
@@ -959,10 +1059,12 @@ body {
   font-size: 14px;
   color: #555;
   line-height: 1.65;
-  text-align: center;
   margin: 0;
 }
 
+/* ========================================
+   LOCATION
+======================================== */
 .modal-location-text {
   font-size: 14px;
   color: #1a6e3c;
@@ -979,49 +1081,33 @@ body {
   display: block;
 }
 
+/* ========================================
+   FADE ANIMATION
+======================================== */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @media (max-width: 992px) {
+
   .bonus-card {
     flex-direction: column-reverse;
-    padding: 22px;
+    padding: 24px;
+    gap: 28px;
   }
 
   .bonus-image {
     width: 100%;
   }
 
-  .bonus-title {
-    justify-content: center;
-  }
-
-  .bonus-content {
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .bonus-items-wrapper {
-    display: flex;
     flex-direction: row;
-    justify-content: center;
     gap: 24px;
-    width: 100%;
   }
 
   .bonus-item {
     flex: 1;
-    margin-bottom: 0;
   }
 }
 
@@ -1051,6 +1137,7 @@ body {
     text-align: right;
   }
 }
+
 
 @media (max-width: 576px) {
   .hero {

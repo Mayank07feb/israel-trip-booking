@@ -55,32 +55,49 @@
         <video autoplay muted loop>
             <source src="./media/48de2066ae68dc8706b9435b3a86f176f11be3c1.mp4" type="video/mp4">
         </video>
+
         <div class="container-fluid">
             <div class="hero-mb-8 text-center">
                 <img src="./media/logo-white.png" class="img-fluid rounded main-site-log" alt="Logo"
                     style="width: 150px;">
             </div>
 
-            <div class="text-center">
-                <p>הצעת מחיר לחבילה חלומית!</p>
-                <h3 class="hero-h3-font">Florence-Chianti-Saturnia
-                </h3>
-                <p class="gveret-Levin-font d-none">טיול חלומי באיטליה - 8 ימים</p>
-                <h4 class="text-light">Version: 3 </h4>
-                <h4 class="text-light">Trip No: 278 </h4>
+            <!-- Updated Text -->
+            <div class="text-center text-white">
+
+                <p class="mb-2 fs-5">הצעת מחיר:</p>
+
+                <h1 class="display-4 fw-bold mb-3">טוסקנה</h1>
+
+                <p class="fs-5 mb-2">
+                    7 אוגוסט ← 14 אוגוסט
+                </p>
+
+                <!-- Nights -->
+                <p class="mb-1 d-flex justify-content-center align-items-center gap-2">
+                    <img src="./media/Vector-1.png" alt="לילות" style="width:20px;">
+                    <span>5 לילות</span>
+                </p>
+
+                <p class="d-flex justify-content-center align-items-center gap-2">
+                    <img src="./media/Vector-2.png" alt="אנשים" style="width:20px;">
+                    <span>2 אנשים</span>
+                </p>
+
             </div>
+
+            <!-- Buttons -->
             <div class="hero-buttons mt-4">
-                <button class="btn-option btn-dark-option">
+                <button class="btn-option btn-dark-option" onclick="scrollToCard()">
                     <span class="btn-number">2</span>
                     <span class="btn-text">הצעה</span>
                 </button>
 
-                <button class="btn-option btn-red-option">
+                <button class="btn-option btn-red-option" onclick="scrollToCard()">
                     <span class="btn-number">1</span>
                     <span class="btn-text">הצעה</span>
                 </button>
             </div>
-
 
         </div>
     </div>
@@ -90,7 +107,7 @@
         <div class="container">
 
             <!-- Card-1 -->
-            <div class="mb-3 mb-sm-5">
+            <div class="mb-3 mb-sm-5" id="card-one">
                 <div class="trip-card mx-auto">
                     <div class="trip-overlay">
                         <div class="trip-day">יום 1: הגעה לפירנצה</div>
@@ -99,7 +116,7 @@
 
                     <!-- Top Image -->
                     <div class="trip-image">
-                        <img src="./media/Frame_1709.png" alt="Florence">
+                        <img src="./media/Frame-1710.png" alt="Florence">
                     </div>
 
                     <!-- Content Area -->
@@ -565,8 +582,8 @@
                     <div class="bonus-content">
 
                         <div class="bonus-title">
+                            <img src="./media/star.png" alt="">
                             בונוסים
-                            <span class="star">✦</span>
                         </div>
 
                         <!-- Wrapper added for side-by-side on mobile -->
@@ -574,8 +591,8 @@
 
                             <div class="bonus-item">
                                 <div class="bonus-badge">
+                                    <img src="./media/sim.svg" alt="">
                                     ESIM
-                                    <span class="icon">📱</span>
                                 </div>
                                 <div class="bonus-text">
                                     שתי חבילות 5GB בונוס,<br>
@@ -585,8 +602,8 @@
 
                             <div class="bonus-item">
                                 <div class="bonus-badge">
+                                    <img src="./media/phone.svg" alt="">
                                     אפליקציה
-                                    <span class="icon">📲</span>
                                 </div>
                                 <div class="bonus-text">
                                     כל הלוז, המידע, ושירות<br>
@@ -607,7 +624,7 @@
 
                     <div class="private-trip-section">
 
-                        <div class="info-icon">i</div>
+                        <img class="info-icon" src="./media/icon service-line.svg" alt="">
 
                         <h3 class="private-title">
                             בואו נעבור ביחד על פרטי החבילה!
@@ -1005,6 +1022,13 @@
         });
     </script>
 
+    <script>
+        function scrollToCard() {
+            document.getElementById("card-one").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    </script>
 
     <!-- DETAIL MODAL -->
     <div class="detail-modal-overlay" id="detailModalOverlay" onclick="if(event.target===this)closeDetailModal()">
