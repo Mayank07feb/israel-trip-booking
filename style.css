@@ -361,10 +361,24 @@ body {
   list-style-position: inside;
   padding: 0;
   margin: 0 auto 30px auto;
-  max-width: 650px;
+  max-width: 450px;
   color: #555;
   line-height: 1.8;
-  text-align: center;
+  text-align: right;
+  direction: rtl;
+}
+
+@media (max-width: 576px) {
+  .private-steps {
+    text-align: right;
+    direction: rtl;
+    list-style-position: inside;
+  }
+
+  .private-title {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
 }
 
 .private-btn {
@@ -790,7 +804,8 @@ body {
    CLOSE BUTTON (FIXED)
 ======================================== */
 .modal-close-btn {
-  position: fixed;              /* 🔥 FIXED */
+  position: fixed;
+  /* 🔥 FIXED */
   top: 20px;
   right: 20px;
   z-index: 10000;
@@ -841,8 +856,13 @@ body {
   background: #fff;
 }
 
-.modal-arrow.prev { left: 16px; }
-.modal-arrow.next { right: 16px; }
+.modal-arrow.prev {
+  left: 16px;
+}
+
+.modal-arrow.next {
+  right: 16px;
+}
 
 .modal-arrow .material-icons {
   font-size: 22px;
@@ -1085,8 +1105,13 @@ body {
    FADE ANIMATION
 ======================================== */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1177,25 +1202,105 @@ body {
   }
 }
 
-/* WhatsApp Floating Button */
+/* LEFT WhatsApp Button */
 .whatsapp-float {
   position: fixed;
   bottom: 24px;
   left: 24px;
-  z-index: 9999;
+  z-index: 99999;
   background: #25D366;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  width: 56px;
-  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  transition: 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 28px;
 }
 
 .whatsapp-float:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.55);
+}
+
+/* RIGHT Floating Text Box */
+.floating-text-box {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99999;
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  direction: rtl;
+  text-align: right;
+  font-family: 'Heebo', sans-serif;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+/* Label */
+.floating-label {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+/* Timer Badge */
+.floating-timer {
+  background: #e6f7ec;
+  color: #0a8f2c;
+  padding: 8px 14px;
+  border-radius: 999px; /* Perfect pill */
+  font-size: 10px;
+  font-weight: 700;
+  border: 2px solid #0a8f2c;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Space between icon & time */
+}
+
+/* Timer Icon */
+.timer-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+
+  .whatsapp-float {
+    width: 54px;
+    height: 54px;
+    bottom: 18px;
+    left: 18px;
+  }
+
+  .floating-text-box {
+    bottom: 18px;
+    right: 18px;
+    padding: 10px 14px;
+    border-radius: 14px;
+  }
+
+  .floating-label {
+    font-size: 14px;
+  }
+
+  .floating-timer {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+
+  .timer-icon {
+    width: 14px;
+    height: 14px;
+  }
 }
