@@ -30,7 +30,23 @@ body {
 .hero {
   position: relative;
   overflow: hidden;
-  height: 600px;
+  height: 740px;
+
+  display: flex;
+  align-items: center;
+  /* vertical center */
+  justify-content: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.20);
+  z-index: 0;
 }
 
 /* .hero video {
@@ -56,6 +72,9 @@ body {
 .hero .container-fluid {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero .hero-mb-8 {
@@ -126,7 +145,7 @@ body {
 
   /* Hero height */
   .hero {
-    height: 460px;
+    height: 560px;
   }
 
   /* Main heading */
@@ -173,11 +192,18 @@ body {
   border-radius: 22px;
   padding: 14px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease;
+}
+
+/* Hover effect */
+.trip-card:hover {
+  transform: scale(1.03);
+  box-shadow: none;
 }
 
 .trip-overlay {
   direction: rtl;
-  padding: 10px 6px 14px;
+  padding: 16px 16px 0 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -198,7 +224,7 @@ body {
   gap: 6px;
   font-size: 14px;
   font-weight: 500;
-  color: #666;
+  color: #53677B;
   direction: ltr;
 }
 
@@ -217,11 +243,12 @@ body {
 .trip-image {
   overflow: hidden;
   border-radius: 18px;
+  padding: 16px;
 }
 
 .trip-image img {
   width: 100%;
-  height: 260px;
+  height: 300px;
   object-fit: cover;
   border-radius: 18px;
   display: block;
@@ -238,19 +265,25 @@ body {
 .trip-row {
   background: #ffffff;
   border-radius: 16px;
-  padding: 16px 18px;
+  padding: 12px 16px;
   display: flex;
   flex-direction: row;
   direction: ltr;
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
-  transition: 0.25s ease;
+  /* No default hover — only rows with a plus button get it (see below) */
 }
 
-.trip-row:hover {
+/* Only apply hover lift to rows that contain a clickable plus button */
+.trip-row-with-plus:has(.trip-plus-btn) .trip-row {
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+.trip-row-with-plus:has(.trip-plus-btn) .trip-row:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: none;
 }
 
 .trip-text {
@@ -273,13 +306,14 @@ body {
 
 .trip-text small {
   display: block;
-  color: #8a8a8a;
+  color: #53677B;
   font-size: 12px;
   margin-top: 4px;
 }
 
 .trip-text.green-text p {
   color: #0a8f2c;
+  font-weight: 700;
 }
 
 .trip-text.green-text small {
@@ -321,9 +355,27 @@ body {
   padding: 0;
 }
 
+.trip-plus-btn {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  background: #E9EBEE;
+  border: none;
+  border-radius: 10px;
+  box-shadow: none;
+  /* removed shadow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
 .trip-plus-btn:hover {
-  background: #f5f5f5;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+  background: #E9EBEE;
+  box-shadow: none;
+  /* removed hover shadow */
   transform: scale(1.08);
 }
 
@@ -331,14 +383,17 @@ body {
   transform: scale(0.96);
 }
 
-.trip-plus-btn svg {
-  display: block;
+/* icon */
+.trip-plus-btn img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(35%) sepia(11%) saturate(1035%) hue-rotate(168deg) brightness(92%) contrast(87%);
 }
 
 .private-trip-card {
   background: #ffffff;
-  border-radius: 24px;
-  padding: 60px 20px;
+  border-radius: 22px;
+  padding: 16px 16px 22px 16px;
 }
 
 .private-trip-section {
@@ -414,7 +469,7 @@ body {
 .bonus-card {
   max-width: 860px;
   margin: 0 auto;
-  background: #F5EFE6;
+  background: #FFFCEF;
   border-radius: 26px;
   padding: 36px;
   display: flex;
@@ -488,7 +543,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #FCE7B2;
+  background: #FFF7D6;
   padding: 8px 18px;
   border-radius: 10px;
   font-weight: 700;
@@ -517,6 +572,11 @@ body {
   overflow: hidden;
   font-family: "Heebo", sans-serif;
   direction: rtl;
+  padding: 0;
+}
+
+.package-image {
+  padding: 16px;
 }
 
 .package-image img {
@@ -527,7 +587,6 @@ body {
   border-radius: 12px;
 }
 
-
 .package-body {
   padding: 18px 20px 22px;
 }
@@ -537,6 +596,7 @@ body {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 16px;
+  padding: 16px 16px 0 16px;
 }
 
 .package-row {
@@ -548,17 +608,26 @@ body {
   font-size: 15px;
 }
 
+.package-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
 .package-row:last-of-type {
   border-bottom: none;
 }
 
 .package-label {
-  color: #666;
-  font-weight: 500;
+  color: #53677B;
+  font-weight: 400;
 }
 
 .package-value {
-  font-weight: 600;
+  color: #53677B;
+  font-weight: 400;
   direction: ltr;
 }
 
@@ -638,7 +707,7 @@ body {
   align-items: center;
   gap: 14px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #333;
 }
 
@@ -652,7 +721,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   color: #444;
 }
 
@@ -668,7 +737,8 @@ body {
   direction: rtl;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 8px;
 }
 
 /* Red dot */
@@ -677,7 +747,6 @@ body {
   height: 10px;
   background: #b52a2a;
   border-radius: 50%;
-  margin-left: 10px;
   flex-shrink: 0;
 }
 
@@ -711,11 +780,6 @@ body {
   font-size: 15px;
   font-weight: 700;
   direction: rtl;
-}
-
-.footer-item .material-icons {
-  font-size: 18px;
-  color: #555;
 }
 
 .footer-item a {
@@ -776,8 +840,8 @@ body {
   margin: 0 auto;
   background: #fff;
   position: relative;
-
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -789,6 +853,7 @@ body {
   width: 100%;
   height: 52vh;
   background: #111;
+  overflow: hidden;
 }
 
 .modal-slides {
@@ -912,6 +977,7 @@ body {
 ======================================== */
 .modal-body-content {
   direction: rtl;
+  text-align: right;
   padding: 24px 20px 40px;
   background: #fff;
 }
@@ -952,18 +1018,21 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  direction: rtl;
 }
 
 .modal-room-label {
   font-size: 18px;
   font-weight: 700;
   color: #1a1a1a;
+  text-align: right;
 }
 
 .modal-room-value {
   font-size: 14px;
   color: #666;
   direction: ltr;
+  text-align: left;
 }
 
 .modal-section-title {
@@ -971,14 +1040,15 @@ body {
   font-weight: 700;
   color: #1a1a1a;
   text-align: right;
-  margin: 0 0 16px;
+  margin: 0 0 6px;
 }
 
 .modal-amenities {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 16px;
   flex-wrap: wrap;
+  direction: rtl;
 }
 
 .modal-amenity {
@@ -1013,7 +1083,7 @@ body {
 .modal-rating-block {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 16px;
   direction: rtl;
   margin-bottom: 20px;
@@ -1052,7 +1122,7 @@ body {
 .modal-review-header {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 10px;
   margin-bottom: 8px;
   direction: rtl;
@@ -1090,6 +1160,7 @@ body {
   color: #555;
   line-height: 1.65;
   margin: 0;
+  text-align: right;
 }
 
 /* ========================================
@@ -1097,7 +1168,7 @@ body {
 ======================================== */
 .modal-location-text {
   font-size: 14px;
-  color: #1a6e3c;
+  color: #000000;
   text-align: right;
   margin-bottom: 12px;
   font-weight: 500;
@@ -1230,7 +1301,7 @@ body {
 }
 
 .whatsapp-float img {
-  width: 28px;
+  width: 50px;
 }
 
 .whatsapp-float:hover {
@@ -1244,7 +1315,7 @@ body {
   right: 24px;
   z-index: 99999;
   background: #ffffff;
-  padding: 14px 18px;
+  padding: 14px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   direction: rtl;
@@ -1252,6 +1323,7 @@ body {
   font-family: 'Heebo', sans-serif;
   display: inline-flex;
   flex-direction: column;
+  gap: 6px;
 }
 
 /* Label */
@@ -1260,7 +1332,8 @@ body {
   font-size: 16px;
   font-weight: 700;
   color: #666;
-  margin-bottom: 6px;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 /* Timer Badge */
@@ -1268,24 +1341,23 @@ body {
   background: #e6f7ec;
   color: #0a8f2c;
   padding: 8px 14px;
-  border-radius: 999px; /* Perfect pill */
-  font-size: 10px;
+  border-radius: 999px;
+  font-size: 16px;
   font-weight: 700;
   border: 2px solid #0a8f2c;
   display: inline-flex;
   align-items: center;
-  gap: 8px; /* Space between icon & time */
+  gap: 8px;
 }
 
 /* Timer Icon */
 .timer-icon {
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
 }
 
 /* Mobile Responsive */
 @media (max-width: 576px) {
-
   .whatsapp-float {
     width: 54px;
     height: 54px;
@@ -1296,8 +1368,9 @@ body {
   .floating-text-box {
     bottom: 18px;
     right: 18px;
-    padding: 10px 14px;
+    padding: 12px;
     border-radius: 14px;
+    gap: 4px;
   }
 
   .floating-label {
@@ -1305,12 +1378,12 @@ body {
   }
 
   .floating-timer {
-    font-size: 10px;
+    font-size: 14px;
     padding: 6px 12px;
   }
 
   .timer-icon {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
   }
 }
