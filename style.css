@@ -822,7 +822,7 @@ body {
   background: rgba(0, 0, 0, 0.55);
   display: none;
   justify-content: center;
-  align-items: stretch;
+  align-items: center;
 }
 
 .detail-modal-overlay.active {
@@ -833,12 +833,14 @@ body {
 /* ========================================
    MODAL CONTAINER (WHOLE MODAL SCROLLS)
 ======================================== */
+
 .detail-modal {
   width: 100%;
-  max-width: 860px;
-  height: 100dvh;
+  max-width: 560px;
+  max-height: 90dvh;
   margin: 0 auto;
   background: #fff;
+  border-radius: 20px;
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
@@ -1247,12 +1249,32 @@ body {
 
 @media (max-width: 576px) {
   .hero {
-    height: 500px;
+    height: 60svh;
+    padding: 16px !important;
+    padding-top: 30px !important;
+    align-items: flex-start;
+  }
+
+  .hero .hero-mb-8 {
+    margin-bottom: 0.6rem !important;
+  }
+
+  .hero h1 {
+    font-size: 52px !important;
+    line-height: 1.1;
+    margin-bottom: 8px !important;
   }
 
   .hero p {
-    font-size: 24px;
-    line-height: 50px;
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .hero p.mb-1,
+  .hero p.d-flex {
+    font-size: 14px !important;
+    gap: 6px !important;
   }
 
   .hero h3 {
@@ -1270,8 +1292,19 @@ body {
     font-weight: 500;
   }
 
+  .hero-buttons {
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .btn-option {
+    padding: 12px 26px;
+    font-size: 15px;
+    border-radius: 14px;
+  }
+
   .main-site-log {
-    width: 100px !important;
+    width: 80px !important;
   }
 
   .not-included-title {
