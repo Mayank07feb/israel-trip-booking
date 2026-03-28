@@ -1,6 +1,30 @@
+/* FbKazefet Font Family */
 @font-face {
-  font-family: 'Gveret Levin AlefAlefAlef';
-  src: url('fonts/gveret_levin.ttf') format('truetype');
+  font-family: 'FbKazefet';
+  src: url('fonts/FbKazefet-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FbKazefet';
+  src: url('fonts/FbKazefet-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FbKazefet';
+  src: url('fonts/FbKazefet-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FbKazefet';
+  src: url('fonts/FbKazefet-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
 }
 
 @media (min-width: 1400px) {
@@ -16,6 +40,7 @@
 }
 
 body {
+  font-family: 'FbKazefet', 'Heebo', 'Noto Sans Hebrew', sans-serif;
   background: #f1f1f1;
 }
 
@@ -88,7 +113,7 @@ body {
 
 .hero h3 {
   font-size: 65px;
-  font-family: 'Noto Sans Hebrew';
+  font-family: 'FbKazefet', 'Noto Sans Hebrew';
   line-height: 102px;
   color: #FFFFFF;
 }
@@ -399,7 +424,7 @@ body {
 .private-trip-section {
   text-align: center;
   direction: rtl;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'FbKazefet', 'Heebo', sans-serif;
 }
 
 .info-icon {
@@ -478,7 +503,7 @@ body {
   gap: 48px;
   direction: ltr;
   /* image left */
-  font-family: 'Heebo', sans-serif;
+  font-family: 'FbKazefet', 'Heebo', sans-serif;
 }
 
 .bonus-image {
@@ -570,7 +595,7 @@ body {
   border-radius: 22px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, .06);
   overflow: hidden;
-  font-family: "Heebo", sans-serif;
+  font-family: 'FbKazefet', 'Heebo', sans-serif;
   direction: rtl;
   padding: 0;
 }
@@ -678,7 +703,7 @@ body {
   padding: 28px 26px 26px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
   direction: rtl;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'FbKazefet', 'Heebo', sans-serif;
 }
 
 .not-included-title {
@@ -878,11 +903,10 @@ body {
 }
 
 /* ========================================
-   CLOSE BUTTON (FIXED)
+   CLOSE BUTTON 
 ======================================== */
 .modal-close-btn {
   position: fixed;
-  /* 🔥 FIXED */
   top: 20px;
   right: 20px;
   z-index: 10000;
@@ -1353,7 +1377,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   direction: rtl;
   text-align: right;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'FbKazefet', 'Heebo', sans-serif;
   display: inline-flex;
   flex-direction: column;
   gap: 6px;
